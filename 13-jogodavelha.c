@@ -1,3 +1,29 @@
+/*
+ 13. Escreva um programa que permita dois usuários jogarem o jogo-da-velha. O programa deve pedir que os jogadores X e 0 informem os lances alternadamente. O programa exibe as posições do jogo da seguinte forma:
+1 2 3
+4 5 6
+7 8 9
+
+O jogador faz o lance informando o número da posição que deseja assinalar. Após cada lance, o programa
+exibe o tabuleiro. Um exemplo de configuração de tabuleiro:
+
+X X 3
+4 5 6
+7 8 9
+*/
+
+/*
+Metodos e Functions: player(), mostrarQuadro(), verificarQuadro()
+Variables
+Saída int board[3][3]={1,2,3,4,5,6,7,8,9} <Array bidimensional para gerenciamento do quadro do game
+Leitura: int jogada <Recebe valor do jogador pelo metodo player() 
+controle: int rounds <Controla a jogada de dois jogadores até o fim do quadro
+controle: int vitoria <Recebe o valor do vecendor pelo metodo verificarQuadro()
+controle: int skip <Verifica se tem jogadas invalidas para serem removidas do contador rounds
+Leitura: char op <Ler o valor do usuario para escolha de encerramento do programa ou não
+
+*/
+
 #include<stdio.h>
 
 int player(int p,int rounds){ //chama jogador
@@ -6,8 +32,10 @@ int player(int p,int rounds){ //chama jogador
         printf("\nEMPATE !\n");
         return 0;
     }else{
+        do{
         printf("Player %d, Sua vez: ",p);
         scanf("%d",&jogada);
+        }while(jogada<=0);
         return -jogada;
     }
 }
@@ -39,14 +67,12 @@ int verificaQuadro(int board[][3]){ //verifica o quadro e retorna se existe venc
         player=2;
     }else{
 
-        for (int li=0;li<=2;++li){
-            
+        for (int li=0;li<=2;++li){   
             for (int col=0;col<=2;++col){
             
                 if (board[li][col] == -1){ 
                     lin[col]=1;
-                }
-                if (board[li][col] == -2){ 
+                }else if (board[li][col] == -2){ 
                     lin[col]=2;
                 }
 
@@ -56,6 +82,7 @@ int verificaQuadro(int board[][3]){ //verifica o quadro e retorna se existe venc
                     colu[col]=2;
                 }   
 
+            }
                 if(lin[0]==1 && lin[1]==1 && lin[2]==1 || colu[0]==1 && colu[1]==1 && colu[2]==1){
                     li=+10;
                     player=1;
@@ -63,7 +90,7 @@ int verificaQuadro(int board[][3]){ //verifica o quadro e retorna se existe venc
                     li=+10;
                     player=2;
                 }
-            }
+
             lin[0]=0;lin[1]=0;lin[2]=0;
             colu[0]=0;colu[1]=0;colu[2]=0;
         
