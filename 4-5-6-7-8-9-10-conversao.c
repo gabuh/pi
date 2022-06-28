@@ -1,6 +1,18 @@
  
 /*
-Metodos e functions: cparaf(), fparac(), 
+Metodos e functions: 
+temperatura, cparaf, faparac,
+distancia, polparacent, polparam, pesparacent, pesparam, mparapol, mparapes, centparapol, centparapes,
+peso, libparagram, libparakgram, oncaparagram, oncaparakgram, gramparalib, gramparaonca, kgramparaonca, kgramparalib,
+volume , galparalitro, galparaml, cupsparalitro, cupsparaml, litroparagal,litroparacups, mlparagal, mlparacups
+
+Variaveis de saida
+inteiro: unidade;
+
+Variaveis de entrada
+inteiro: unidade;
+
+GE = 5 GR = 5
 */
 #include<stdio.h>
 

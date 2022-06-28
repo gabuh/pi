@@ -22,6 +22,8 @@ controle: int vitoria <Recebe o valor do vecendor pelo metodo verificarQuadro()
 controle: int skip <Verifica se tem jogadas invalidas para serem removidas do contador rounds
 Leitura: char op <Ler o valor do usuario para escolha de encerramento do programa ou não
 
+GE=5 GR=5
+
 */
 
 #include<stdio.h>

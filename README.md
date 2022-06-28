@@ -1,8 +1,11 @@
 # ip
 Individual Process
 
-## Jogo da Velha Fluxogram
+## Ex. 13 Jogo da Velha Fluxogram
 ![jogodavelha](13-jogodavelha.png)
 
-## Programa De Conversão (Simple)
-#### Temperatura, Volume, Peso, Distancia
+## Ex. 4-5-6-7-8-9-10 Menu Programa De Conversão (Simple)
+#### Temperatura, Volume, Peso, Distância
+
+## Ex.18 Estatística
+![estatistica](18-estatistica.png)
