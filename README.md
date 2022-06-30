@@ -13,6 +13,9 @@ Individual Process
 ![ocorrenciadevogais](21-ocorrenciadevogais.png)
 
 
+## Ex. 36 Clientes de Banco
+![clientesbanco](36-clientesbanco.png)
+
 ## Ex. 4-5-6-7-8-9-10 Menu Programa De Conversão (Simple)
 #### Temperatura, Volume, Peso, Distância
 ![menudeconversao](4-5-6-7-8-9-10-conversao.png)
