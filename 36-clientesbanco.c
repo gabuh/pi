@@ -40,6 +40,10 @@ struct clientebanco
 };
 
 
+void addSaldoShow(struct clientebanco cliente[]);
+void mostrarLowSaldo(struct clientebanco cliente[]);
+
+
 
 void main(){
     struct clientebanco cliente[TAM];
@@ -69,20 +73,9 @@ void main(){
                     printf(">[%s] [%d] [%f]\n",cliente[i].nome,cliente[i].contaId,cliente[i].saldo);
                 }
             }else if(strcmp(op,"2")==0){
-                for (int i=0;i<TAM;i++){
-                    if(cliente[i].saldo>1000){
-                        cliente[i].saldo=cliente[i].saldo+100;
-                        printf("Cliente, %s com saldo R$, %f, foi adicionado +R$100\nSaldo atual: %f\n",cliente[i].nome,cliente[i].saldo-100,cliente[i].saldo);
-                    }
-                }
+            addSaldoShow(cliente);
             }else if(strcmp(op,"3")==0){
-                    printf("Clientes com o saldo menor que R$200\n");
-                    printf(">[Nome] [saldo] [id conta]\n");
-                for(int i=0;i<TAM;++i){
-                    if(cliente[i].saldo<200){
-                        printf(">[%s] [%f] [%d]\n",cliente[i].nome,cliente[i].saldo,cliente[i].contaId);
-                    }
-                }
+            mostrarLowSaldo(cliente);   
             }else if(strcmp(op,"4")==0){
                 strcpy(op,"0");
                 control++;
@@ -102,3 +95,21 @@ void main(){
 
 
 
+void addSaldoShow(struct clientebanco cliente[]){
+    for (int i=0;i<TAM;i++){
+        if(cliente[i].saldo>1000){
+            cliente[i].saldo=cliente[i].saldo+100;
+            printf("Cliente, %s com saldo R$, %f, foi adicionado +R$100\nSaldo atual: %f\n",cliente[i].nome,cliente[i].saldo-100,cliente[i].saldo);
+        }
+    }
+}
+
+void mostrarLowSaldo(struct clientebanco cliente[]){
+    printf("Clientes com o saldo menor que R$200\n");
+    printf(">[Nome] [saldo] [id conta]\n");
+    for(int i=0;i<TAM;++i){
+        if(cliente[i].saldo<200){
+            printf(">[%s] [%f] [%d]\n",cliente[i].nome,cliente[i].saldo,cliente[i].contaId);
+        }
+    }
+}
