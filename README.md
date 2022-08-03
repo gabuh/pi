@@ -9,6 +9,7 @@ Individual Process
 ![jogodavelha](13-jogodavelha.png)
 
 </details>
+
 ## [Ex.18](18-estatistica.c) Estatística :white_check_mark:
 
 <details>
