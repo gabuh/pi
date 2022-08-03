@@ -10,6 +10,8 @@ Individual Process
 
 </details>
 
+---
+
 ## [Ex.18](18-estatistica.c) Estatística :white_check_mark:
 
 <details>
@@ -18,6 +20,8 @@ Individual Process
 ![estatistica](18-estatistica.png)
 
 </details>
+
+---
 
 ## [Ex.21](21-ocorrenciadevogais.c) Ocorrencia de vogais :white_check_mark:
 
@@ -28,6 +32,8 @@ Individual Process
 
 </details>
 
+---
+
 ## [Ex.37](37-estudantecadastro.c) Alunos Cadastro :white_check_mark:
 
 <details>
@@ -36,6 +42,8 @@ Individual Process
 ![alunocadastro](37-estudantecadastro.png)
 
 </details>
+
+---
 
 ## [Ex.39](39-onibusbilhete.c) Venda Bilhete Onibus :white_check_mark:
 
@@ -46,6 +54,8 @@ Individual Process
 
 </details>
 
+---
+
 ## [Ex.36](36-clientesbanco.c) Clientes de Banco :white_check_mark:
 
 <details>
@@ -54,6 +64,8 @@ Individual Process
 ![clientesbanco](36-clientesbanco.png)
 
 </details>
+
+---
 
 ## [Ex.4-5-6-7-8-9-10](4-5-6-7-8-9-10-conversao.c) Menu Programa De Conversão (Simple) :white_check_mark:
 
