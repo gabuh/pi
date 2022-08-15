@@ -27,6 +27,7 @@ GE=5 GR=5
 */
 
 #include<stdio.h>
+#include<string.h>
 
 int player(int p,int rounds){ //chama jogador
     int jogada;
@@ -107,7 +108,7 @@ int main(){ //menu, interacao principal
     int rounds=0;
     int vitoria;
     int skip=0;
-    char op[]=" ";
+    char op[100];
 do{
     int board[3][3]={1,2,3,4,5,6,7,8,9}; //quadro do jogo, matriz 3x3
     
@@ -115,25 +116,25 @@ do{
 
 do{
 
-    for (int round=1;round<=2;++round){
-            jogada=player(round,rounds);
+    for (int roundControl=1;roundControl<=2;++roundControl){
+            jogada=player(roundControl,rounds);
             if (jogada!=0){
                 for(int i=0;i<=2;++i){
                     for (int e=0;e<=2;++e){ 
                         if (jogada == -board[i][e]){
-                            board[i][e]=-round;
-                            skip=round;                    
+                            board[i][e]=-roundControl;
+                            skip=roundControl;                    
                         }
                     }
                 }
                     mostrarQuadro(board);
                     vitoria=verificaQuadro(board);
                     if (vitoria > 0){ // to break the loop above.
-                        round=10;
+                        roundControl=10;
                     }
 
-                if(skip!=round){
-                    --round;        }
+                if(skip!=roundControl){
+                    --roundControl;        }
             }
         }
         rounds++;
@@ -143,12 +144,12 @@ if(vitoria>0){
 }
 rounds=0;
 vitoria=0;
-printf("\n>Deseja jogar novamente? <Digite qualquer tecla >\n>Deseja sair <Digite 0>\n>>>> ");
+printf("\n>Deseja jogar novamente? <Digite qualquer tecla >\n>Deseja sair <Digite exit>\n>>>> ");
 
 scanf("%s",op);
 
 
-}while(op[0]!='0');
+}while(strcmp(op,"exit")!=0);
 
     return 0 ;
 } 
